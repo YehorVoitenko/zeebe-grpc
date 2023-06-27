@@ -1,0 +1,111 @@
+12:55:16.596 [] [main] INFO  io.zeebe.util.config - Reading configuration for class class io.zeebe.broker.system.configuration.BrokerCfg from file /Users/mykhailovoitenko/Desktop/Yehor/PYTHON/AVATAA/test_zeebe_install/zeebe-broker-0.13.1/conf/zeebe.cfg.toml 
+12:55:16.679 [] [main] INFO  io.zeebe.broker.system - Scheduler configuration: Threads{cpu-bound: 2, io-bound: 2}.
+12:55:16.719 [] [main] INFO  io.zeebe.broker.system - Version: 0.13.1
+12:55:16.729 [] [main] INFO  io.zeebe.broker.system - Starting broker with configuration {
+  "network": {
+    "host": "0.0.0.0",
+    "defaultSendBufferSize": "16M",
+    "portOffset": 0,
+    "client": {
+      "controlMessageBufferSize": "8M",
+      "host": "0.0.0.0",
+      "port": 26501,
+      "sendBufferSize": "16M"
+    },
+    "management": {
+      "receiveBufferSize": "8M",
+      "host": "0.0.0.0",
+      "port": 26502,
+      "sendBufferSize": "16M"
+    },
+    "replication": {
+      "host": "0.0.0.0",
+      "port": 26503,
+      "sendBufferSize": "16M"
+    },
+    "subscription": {
+      "receiveBufferSize": "8M",
+      "host": "0.0.0.0",
+      "port": 26504,
+      "sendBufferSize": "16M"
+    }
+  },
+  "cluster": {
+    "initialContactPoints": [],
+    "partitionIds": [
+      0
+    ],
+    "nodeId": 0,
+    "partitionsCount": 1,
+    "replicationFactor": 1,
+    "clusterSize": 1
+  },
+  "threads": {
+    "cpuThreadCount": 2,
+    "ioThreadCount": 2
+  },
+  "metrics": {
+    "reportingInterval": "5s",
+    "file": "/Users/mykhailovoitenko/Desktop/Yehor/PYTHON/AVATAA/test_zeebe_install/zeebe-broker-0.13.1/metrics/zeebe.prom"
+  },
+  "data": {
+    "directories": [
+      "/Users/mykhailovoitenko/Desktop/Yehor/PYTHON/AVATAA/test_zeebe_install/zeebe-broker-0.13.1/data"
+    ],
+    "defaultLogSegmentSize": "512M",
+    "snapshotPeriod": "15m",
+    "snapshotReplicationPeriod": "5m"
+  },
+  "gossip": {
+    "retransmissionMultiplier": 3,
+    "probeInterval": "1s",
+    "probeTimeout": "500ms",
+    "probeIndirectNodes": 3,
+    "probeIndirectTimeout": "1s",
+    "suspicionMultiplier": 5,
+    "syncTimeout": "3s",
+    "syncInterval": "15s",
+    "joinTimeout": "1s",
+    "joinInterval": "1s",
+    "leaveTimeout": "1s",
+    "maxMembershipEventsPerMessage": 32,
+    "maxCustomEventsPerMessage": 8
+  },
+  "raft": {
+    "heartbeatInterval": "250ms",
+    "electionInterval": "1s",
+    "leaveTimeout": "1s"
+  },
+  "exporters": [],
+  "gateway": {
+    "enable": true,
+    "network": {
+      "host": "0.0.0.0",
+      "port": 26500
+    },
+    "cluster": {
+      "contactPoint": "0.0.0.0:26501",
+      "transportBuffer": "2M",
+      "requestTimeout": "15s"
+    },
+    "threads": {
+      "managementThreads": 1
+    }
+  }
+}
+12:55:16.800 [] [main] INFO  io.zeebe.gateway - Version: 0.13.1
+12:55:16.802 [] [main] INFO  io.zeebe.gateway - Starting gateway with configuration {
+  "enable": true,
+  "network": {
+    "host": "0.0.0.0",
+    "port": 26500
+  },
+  "cluster": {
+    "contactPoint": "0.0.0.0:26501",
+    "transportBuffer": "2M",
+    "requestTimeout": "15s"
+  },
+  "threads": {
+    "managementThreads": 1
+  }
+}
